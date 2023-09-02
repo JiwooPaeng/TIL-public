@@ -119,3 +119,46 @@ Server Side Rendering<br>
     - SEO 최적화가 필수
 - SSR은 애초에 서버 사이드에서 컴파일 완료되어 클라이언트로 넘어오기에 크롤러 대응이 용이
 
+<br>
+<hr>
+<br>
+
+**23.09.02(토)**
+# TypeScript interface
+Typescript에서 객체를 선언할 때 사용 : interface와 type alias<br>
+## 사용법
+```js
+interface Point {
+	x: number;
+	y: number;
+}
+
+function printPoint(point: Point) {
+	console.log(`x 좌표는 ${point.x}입니다`)
+	console.log(`y 좌표는 ${point.y}입니다`)
+	console.log(`z 좌표는 ${point.z}입니다.`)
+}
+
+interface Point {
+	z: number;
+}
+// 인터페이스 확장 가능
+
+printPoint({ x: 100, y: 100, z: 200 })
+``` 
+## 상속
+**extends**를 활용하면 interface간 상속 가능
+```js
+interface User {
+    user_name: string,
+    age: number,
+}
+
+interface MyCar extends User{
+    car_name:string,
+    color: string,
+    start: () => void,
+    stop: () => void,
+}
+// User를 상속받은 MyCar 객체를 활용 가능
+```
