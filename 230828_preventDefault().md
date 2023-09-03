@@ -162,3 +162,24 @@ interface MyCar extends User{
 }
 // User를 상속받은 MyCar 객체를 활용 가능
 ```
+
+<br>
+<hr>
+<br>
+
+**23.09.03(일)**
+# CI/CD
+Continuous Integration(지속적 통합)/Continuous Delivery(지속적 배포)<br>
+**CI/CD 파이프라인**<br>
+- 통합 및 테스트 단계에서부터 제공 및 배포에 이르는 애플리케이션의 라이프사이클 전체에 걸쳐 지속적인 자동화와 모니터링을 하는 방법<br>
+## CI
+- 지속적 통합(Continuous Integration) :  코드의 변경사항이 정기적으로 빌드 및 테스트를 거쳐 공유 레포지토리에 병합 -> 충돌 문제 해결
+## CD
+**자동화**
+- 지속적 제공(Continuous Delivery) : 개발자들이 애플리케이션에 적용한 변경 사항이 버그 테스트를 거쳐 레포지토리에 자동으로 업로드 되는것
+- 지속적 배포(Continuous Deployment) : 지속적 제공되는 레포지토리에서 애플리케이션을 실시간으로 프로덕션 환경으로 배포할 수 있음
+
+<br>
+- 참고 : https://www.redhat.com/ko/topics/devops/what-is-ci-cd
+
+
