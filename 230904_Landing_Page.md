@@ -66,3 +66,5 @@ export default function Page({ params, searchParams, }: Props) {
 }
 ```
 - http://URL/{params.id}?a={searchParams.a} 로 이동가능
+
+- 참고: [Next.js-App Router-File Conventions-page.js]([https://aws.amazon.com/ko/what-is/cdn/](https://nextjs.org/docs/app/api-reference/file-conventions/page#searchparams-optional)https://nextjs.org/docs/app/api-reference/file-conventions/page#searchparams-optional)
