@@ -38,3 +38,31 @@ Server Side 단에서 Pre-Rendering 된 정적 페이지(HTML document)와 번�
 <br>
 
 참고: [CDN이란 무엇입니까?](https://aws.amazon.com/ko/what-is/cdn/)
+
+<br>
+<hr>
+<br>
+
+**23.09.07(목)**
+# App Router - Params
+App Router의 params와 searchParams를 활용해 편리한 라우팅 가능
+```js
+type Props = {
+  params: {
+    id: string,
+  }
+  searchParams: {
+    [key: string]: string | string[] | undefined 
+  }
+}
+
+export default function Page({ params, searchParams, }: Props) {
+  return (
+    <div>
+      <h1>{params.id}</h1>
+      <h2>{searchParams.a}</h2>
+    </div>
+  )
+}
+```
+- http://URL/{params.id}?a={searchParams.a} 로 이동가능
