@@ -68,3 +68,19 @@ export default function Page({ params, searchParams, }: Props) {
 - http://URL/{params.id}?a={searchParams.a} 로 이동가능
 
 - 참고: [Next.js-App Router-File Conventions-page.js]([https://aws.amazon.com/ko/what-is/cdn/](https://nextjs.org/docs/app/api-reference/file-conventions/page#searchparams-optional)https://nextjs.org/docs/app/api-reference/file-conventions/page#searchparams-optional)
+
+<br>
+<hr>
+<br>
+
+**23.09.08(금)**
+# VIEW
+하나 이상의 기본 테이블이나 다른 뷰를 이용하여 생성되는 가상 테이블<br>
+- 뷰에서는 데이터 딕셔너리 테이블에 뷰에 대한 SQL문만 저장되어 디스크 저장공간 할당이 이루어지지 않음
+- 테이블 구조가 변경되어도 뷰를 사용하는 응용 프로그램은 변경하지 않아도 된다.
+```SQL
+CREATE VIEW my_view AS
+SELECT column1, column2, ...
+FROM my_table
+WHERE condition;
+```
