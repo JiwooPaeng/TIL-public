@@ -84,3 +84,20 @@ SELECT column1, column2, ...
 FROM my_table
 WHERE condition;
 ```
+
+<br>
+<hr>
+<br>
+
+**23.09.09(토)**
+# Hoisting
+**자바스크립트 호이스팅** <br>
+인터프리터가 코드를 실행하기 전에 js 엔진이 함수, 변수, 클래스 또는 임포트의 선언문을 해당 범위의 맨위로 이동시킨 것<br>
+
+#### 💡함수만 지역변수 호이스팅, if문 while문 등등 전역변수 호이스팅
+
+<br>
+
+- 선언되지 않은 변수에 접근을 시도하는 경우 ReferenceError(not defined) 예외가 발생하지만, **var**를 사용해 접근 시도 이후 변수 선언되어있는 경우에는 undefined (변수 선언과 변수 초기화(undefined) 이루어짐). 
+
+- let으로 개선 : 호이스팅을 하지만 선언되기 이전까지를 **temporal dead zone**으로 두고, 변수의 사용을 제한
