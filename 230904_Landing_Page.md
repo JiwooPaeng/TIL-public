@@ -101,3 +101,7 @@ WHERE condition;
 - 선언되지 않은 변수에 접근을 시도하는 경우 ReferenceError(not defined) 예외가 발생하지만, **var**를 사용해 접근 시도 이후 변수 선언되어있는 경우에는 undefined (변수 선언과 변수 초기화(undefined) 이루어짐). 
 
 - let으로 개선 : 호이스팅을 하지만 선언되기 이전까지를 **temporal dead zone**으로 두고, 변수의 사용을 제한
+
+<br>
+
+- 참고: [호이스팅](https://developer.mozilla.org/ko/docs/Glossary/Hoisting)
