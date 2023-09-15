@@ -68,3 +68,106 @@ e.g.) 사용자가 사이트에 한 번 로그인하면 유효기간이 끝날 �
 
 ### 한계
 - 한 번 발행한 토큰은 유효기간이 끝나기 전까지 따로 통제 불가능하기 때문에 세션에 비해 토큰 탈취의 가능성이 높음
+
+<br>
+<hr>
+<br>
+
+**23.09.13(금)**
+# Fetch vs Axios
+백엔드 또는 서드파티 API에 네트워크 요청을 보낼때 사용하는 HTTP 클라이언트<br>
+- 모두 promise 기반의 HTTP 클라이언트
+
+## Fetch API
+- 모던 브라우저에 내장되어 있어 따로 설치할 필요 없음
+
+```js
+
+fetch(url, {
+  method: "GET", // (POST, PUT, DELETE, etc.)
+  headers: {
+    "Content-Type": "application/json", // 명시해야함
+  },
+  body: JSON.stringify({}), // 객체를 변환한 뒤 body에 할당
+}).then((res) => res.json()).then(console.log)
+.catch((err) => console.log(err.message))
+
+```
+- fetch()는 .then() 메서드에서 처리된 promise를 반환하기 때문에, JSON 데이터로 변환하기 위해 `.json()`메서드를 호출
+
+```js
+
+fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(
+        `This is an HTTP error: The status is ${response.status}`
+      );
+    } // response.ok의 상태가 false인 경우 .catch 블록에서 처리되도록 커스텀
+    return response.json();
+  })
+  .then(console.log)
+  .catch((err) => {
+    console.log(err.message);
+  });
+
+```
+- Fetch는 404에러 또는 다른 HTTP 에러 응답을 받았다고 해서 promise를 곧장 reㅓect하지 않음 (네트워크 장애가 발생한 경우에만 promise를 거부)
+- 따라서 수동으로 HTTP 에러를 처리
+
+### TimeOut 설정
+```js
+
+const controller = new AbortController();
+const signal = controller.signal;
+setTimeout(() => controller.abort(), 4000);
+
+fetch(url, {
+  signal: signal,
+})
+  .then((response) => response.json())
+  .then(console.log)
+  .catch((err) => {
+    console.error(err.message);
+  });
+```
+- abort 메서드가 호출될 때 마다 fetch 요청이 종료됨
+
+
+## Axios
+- 별도로 프로젝트에 추가하여 브라우저 또는 node.js 환경에서 사용 가능
+
+```js
+
+axios({
+  timeout: 4000, // 기본 설정은 '0'입니다 (타임아웃 없음)
+  method: "get",
+  url: url,
+  headers: {},
+  data: {},
+}).then((res) => console.log(res.data))
+.catch((err) => {
+// 에러 처리 (promise의 상태코드가 2xx의 범위를 넘어간 경우)
+if (err.response) {
+// 요청이 이루어졌고 서버가 응답했을 경우
+
+    const { status, config } = err.response;
+
+    if (status === 404) {
+      console.log(`${config.url} not found`);
+    }
+    if (status === 500) {
+      console.log("Server error");
+    }
+
+  } else if (err.request) {
+    // 요청이 이루어졌으나 서버에서 응답이 없었을 경우
+    console.log("Error", err.message);
+  } else {
+    // 그 외 다른 에러
+    console.log("Error", err.message);
+  }
+});
+
+```
+- axios response 데이터 타입은 기본적으로 JSON
