@@ -171,3 +171,46 @@ if (err.response) {
 
 ```
 - axios response 데이터 타입은 기본적으로 JSON
+
+<br>
+<hr>
+<br>
+
+**23.09.14(토)**
+# lambda
+python 함수 표현식
+
+```py
+lambda 매개변수 : 표현식
+```
+
+<br>
+사용예시
+
+## map()
+```py
+
+list(map(lambda x: x ** 2, range(5))) 
+# [0, 1, 4, 9, 16]
+
+```
+
+## reduce()
+시퀀스(문자열, 리스트, 튜플)의 원소들을 누적적으로 함수에 적용
+
+```py
+
+from functools import reduce
+reduce(lambda x, y: x + y, [0, 1, 2, 3, 4])
+# 10
+
+```
+
+## filter()
+
+```py
+
+list(filter(lambda x: x < 5, range(10)))
+[0, 1, 2, 3, 4]
+
+```
