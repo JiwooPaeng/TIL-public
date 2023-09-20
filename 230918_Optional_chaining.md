@@ -20,3 +20,14 @@ const isTrue = !!"string"
 
 ```
 다른 타입의 데이터를 boolean 타입으로 명시적으로 변환해주기 위해 사용
+
+<br>
+<hr>
+<br>
+
+**23.09.20(수)**
+# z-index
+CSS에서 위치 지정 요소(position absolute, fixed 등)의 박스에 대해, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정
+- z-index: auto 보다 z-index: 6이 더 위에 위치 (더 큰 값을 가질수록 위)
+
+- 참고: [z-index](https://developer.mozilla.org/ko/docs/Web/CSS/z-index)
