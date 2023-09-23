@@ -48,3 +48,22 @@ CSS에서 위치 지정 요소(position absolute, fixed 등)의 박스에 대해
 *뭔가 더 불안하고 덜 안정적이게 느껴진다...*
 *그래도 오류를 해결하고 지속적으로 새로운 배움에 맞부딪히며 나아가다보면 조금씩이나마 더 나아지겠지...*<br>
 **불안은 노력과 시간으로 극복하기**
+**라이브러리 의존성 관리, 패키지 버전 관리 잘하기!!**
+
+<br>
+<hr>
+<br>
+
+**23.09.22(굼)**
+# DTO
+Data Transfer Object <br>
+Spring에서 사용 <br>
+계층간 데이터 전송을 위해 도메인 모델 대신 사용되는 순수한 데이터 객체(getter & setter)<br>
+계층 간 데이터 교환을 위해 사용되는 객체
+
+### 데이터 전송 계층
+Presentation(View, Controller) → Business(Service) → Persistence(DAO, Repository) 등
+- **DAO** (Data Access Object) : DB의 data에 접근하기 위한 객체 
+
+1. 유저가 자신의 브라우저에서 데이터를 입력하여 form에 있는 데이터를 DTO에 넣어 전송
+2. 해당 DTO를 받은 서버가 DAO를 이용하여 데이터베이스로 집어넣음
