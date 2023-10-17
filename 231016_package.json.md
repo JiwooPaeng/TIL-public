@@ -23,6 +23,11 @@ package.json에는 명확하게 지정된 버전이 아닌 **시멘틱 버전**�
 
 - 참고: [자바스크립트 의존성 지옥](https://yceffort.kr/2020/11/javascript-dependency-hell)
 
+<hr>
+<br>
+
+**23.10.17(화)**
+# 활용 도구 선택시 고려할 사항
 
 - [시멘틱 버저닝](https://jake-seo-dev.tistory.com/283)
 - [DI(의존성 주입)](https://velog.io/@moongq/Dependency-Injection)
