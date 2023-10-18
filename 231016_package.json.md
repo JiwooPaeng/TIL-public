@@ -52,6 +52,8 @@ package.json에는 명확하게 지정된 버전이 아닌 **시멘틱 버전**�
 - API: 애플리케이션이 서로 통신할 수 있도록 하는 일련의 프로그래밍 명령 / 두 애플리케이션 간의 통신 브리지
 - SDK : 타사 도구를 개발자의 환경에 제공
 
+- 참고: [SDK](https://aws.amazon.com/ko/what-is/sdk/)
+
 - [시멘틱 버저닝](https://jake-seo-dev.tistory.com/283)
 - [DI(의존성 주입)](https://velog.io/@moongq/Dependency-Injection)
 
