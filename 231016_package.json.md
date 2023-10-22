@@ -152,7 +152,25 @@ semantic versioning<br>
 ```
 - patch digit 기준으로 최신 패키지 사용 / 버그 픽스된 최신 버전으로 업데이트
 
-- [시멘틱 버저닝](https://jake-seo-dev.tistory.com/283)
+- 참고: [시멘틱 버저닝](https://jake-seo-dev.tistory.com/283)
+
+<br>
+<br>
+
+**23.10.22(일)**
+# Third-Party
+프로그래밍을 도와주는 플러그인 또는 라이브러리를 만드는 회사<br>
+- 주 기술을 보유한 하드웨어 제조사가 기술을 연구하는 것이 아닌 소규모의 개발자들이 주어진 규격에 맞추어 제품을 생산하는 것 
+- 소프트웨어들이 모여있는 온라인 스토어와 이들 사용자를 기준으로 하는 어플리케이션 제작자
+
+## First-Party
+하드웨어 제조사가 직접 제작한 소프트웨어
+
+## Second-Party
+하드웨어 생산자인 모기업과 자사간의 관계에서의 소프트웨어 개발자<br>
+퍼스트파티의 자회사는 아니지만 퍼스트 파티의 투자를 받거나 전략적 제휴 등의 이유로, 출시하는 대부분의 소프트웨어를 퍼스트 파티 플랫폼의 독점작으로만 출시하는 회사들
+
+- 참고: [Third-Party란?](https://velog.io/@33bini/CS-Third-party%EC%84%9C%EB%93%9C-%ED%8C%8C%ED%8B%B0)
 
 - [DI(의존성 주입)](https://velog.io/@moongq/Dependency-Injection)
 
