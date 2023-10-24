@@ -172,7 +172,5 @@ semantic versioning<br>
 
 - 참고: [Third-Party란?](https://velog.io/@33bini/CS-Third-party%EC%84%9C%EB%93%9C-%ED%8C%8C%ED%8B%B0)
 
-- [DI(의존성 주입)](https://velog.io/@moongq/Dependency-Injection)
-
 
 
